@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'package:get/get.dart';
 import 'package:home/generated/locales.g.dart';
 import 'package:routes_lib2/app_pages.dart';
@@ -37,6 +36,10 @@ class HomePageView extends GetView<HomePageController> {
             ElevatedButton(
               onPressed: () => Get.toNamed(RedirectTo.ROUTES_SECOND),
               child: Text(LocaleKeys.home_proxima_tela.tr),
+            ),
+            ElevatedButton(
+              onPressed: () => Get.toNamed(RedirectTo.ROUTES_ACESSO),
+              child: Text('Tela acesso'),
             )
           ],
         ),
@@ -45,6 +48,17 @@ class HomePageView extends GetView<HomePageController> {
         onPressed: controller.increment,
         child: const Icon(Icons.add),
       ),
+    );
+  }
+}
+
+class InfoBar extends StatelessWidget {
+  const InfoBar({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return AppBar(
+
     );
   }
 }
